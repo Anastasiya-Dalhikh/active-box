@@ -3,7 +3,8 @@
 $font: "Raleway", sans-serif;
 $primary-color: rgba(255, 255, 255, 1);
 $secondary-color:rgba(0, 0, 0, 1);
-$orange-color: rgba(255, 67, 67, 1);;
+$orange-color: rgba(255, 67, 67, 1);
+$gray-color:rgba(186, 187, 197, 1);
 
 
 
@@ -29,10 +30,19 @@ $orange-color: rgba(255, 67, 67, 1);;
 }
 
 %btn-hover{
-    background-color: rgba(255, 255, 255, 1);
-    color:rgba(255, 67, 67, 1);
-    border: 2px solid rgba(255, 67, 67, 1);
+    background-color: rgba(231, 20, 20, 1);
+    color:rgba(255, 255, 255, 1);
+    
 }
+
+%btn-active{
+    background: rgba(255, 67, 67, 1);
+    box-shadow: 4px 4px 30px #FF4343;
+}
+
+
+
+
 
 *{
     margin:0;
@@ -107,6 +117,11 @@ body{
             z-index: 1;
             white-space: nowrap;   
             
+        }
+
+        @media only screen and (min-width:1024px){
+            @include flex-column(38px); 
+            
         } 
         
     }
@@ -146,11 +161,11 @@ body{
     }
 
     &__link:hover{
-        color: $orange-color;
+        color: $gray-color;
     }
 
     &__link:active{
-        opacity:0.7;
+        color: $orange-color;
     }
 
     &__link:first-child{
@@ -285,7 +300,8 @@ body{
     }
 
     &__btn:active{
-        opacity: 0.8;
+        
+        @extend %btn-active;
 
     }
 
@@ -374,7 +390,7 @@ body{
         }
 
     &__btn:active{
-        opacity: 0.8;
+        @extend %btn-active;
 
     }    
 

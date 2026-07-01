@@ -1,0 +1,342 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+.download__btn, .banner__btn {
+  background-color: rgb(255, 67, 67);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.download__btn:hover, .banner__btn:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(255, 67, 67);
+  border: 2px solid rgb(255, 67, 67);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+.container {
+  max-width: 1190px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.banner__wrapper {
+  background-image: url(../images/bg.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.header {
+  padding: 19px 0;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 145px;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  line-height: 0;
+  z-index: 100;
+  position: relative;
+}
+.header__nav {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  padding: 30px 30px 30px;
+  transition: left 0.3s ease;
+  z-index: 99;
+  background: url(../images/bg.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media only screen and (min-width: 768px) {
+  .header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    position: static;
+    left: 0;
+    width: auto;
+    height: auto;
+    background: none;
+    flex-direction: row;
+    padding: 0;
+    z-index: 1;
+    white-space: nowrap;
+  }
+}
+.header__nav.active {
+  left: 0;
+}
+.header__link {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  width: 100%;
+  text-decoration: none;
+  text-transform: uppercase;
+  list-style: none;
+  color: rgb(255, 255, 255);
+  transition: color 0.3s ease;
+  font-size: 13px;
+  line-height: 100%;
+  font-weight: 700;
+}
+@media only screen and (min-width: 768px) {
+  .header__link {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-transform: uppercase;
+    list-style: none;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 700;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .header__link {
+    font-size: 13px;
+    line-height: 15px;
+    font-weight: 700;
+  }
+}
+.header__link:hover {
+  color: rgb(255, 67, 67);
+}
+.header__link:active {
+  opacity: 0.7;
+}
+.header__link:first-child {
+  margin-top: 40px;
+}
+@media only screen and (min-width: 768px) {
+  .header__link:first-child {
+    margin-top: 0;
+  }
+}
+.header .burger {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+}
+@media only screen and (min-width: 768px) {
+  .header .burger {
+    display: none;
+  }
+}
+.header .burger__line {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background: rgb(255, 255, 255);
+  transition: all 0.3s ease;
+}
+.header .burger.active .burger__line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.header .burger.active .burger__line:nth-child(2) {
+  opacity: 0;
+}
+.header .burger.active .burger__line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+@media only screen and (min-width: 768px) {
+  .header {
+    border-bottom: 1px solid rgb(186, 187, 197);
+  }
+}
+
+.banner {
+  padding: 50px 0 52px;
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .banner {
+    padding: 157px 0 126px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .banner {
+    padding: 128px 0 120px;
+  }
+}
+.banner__title {
+  margin-bottom: 40px;
+  color: rgb(255, 255, 255);
+  font-size: 36px;
+  line-height: 42px;
+  font-weight: 900;
+}
+@media only screen and (min-width: 768px) {
+  .banner__title {
+    margin-bottom: 61px;
+    font-size: 48px;
+    line-height: 56px;
+    font-weight: 900;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .banner__title {
+    margin-bottom: 31px;
+    font-size: 64px;
+    line-height: 75px;
+    font-weight: 900;
+  }
+}
+.banner__text {
+  margin-bottom: 60px;
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+}
+@media only screen and (min-width: 768px) {
+  .banner__text {
+    margin-bottom: 89px;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 400;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .banner__text {
+    margin-bottom: 79px;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+}
+.banner__btn {
+  padding: 14px 0 16px;
+  display: inline-block;
+  min-width: 279px;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 900;
+}
+@media only screen and (min-width: 768px) {
+  .banner__btn {
+    min-width: 313px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .banner__btn {
+    min-width: 370px;
+  }
+}
+.banner__btn:active {
+  opacity: 0.8;
+}
+
+.download {
+  padding: 53px 0;
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .download {
+    padding: 127px 0;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .download {
+    padding: 170px 0;
+  }
+}
+.download__title {
+  margin-bottom: 12px;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 500;
+}
+@media only screen and (min-width: 768px) {
+  .download__title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 500;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .download__title {
+    margin-bottom: 22px;
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: 500;
+  }
+}
+.download__text {
+  margin-bottom: 12px;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 15px;
+  font-weight: 700;
+}
+@media only screen and (min-width: 768px) {
+  .download__text {
+    margin-bottom: 45px;
+    font-size: 14x;
+    line-height: 16px;
+    font-weight: 700;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .download__text {
+    margin-bottom: 50px;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 700;
+  }
+}
+.download__btn {
+  display: inline-block;
+  min-width: 280px;
+  padding: 28px 0;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 900;
+}
+@media only screen and (min-width: 768px) {
+  .download__btn {
+    min-width: 565px;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 900;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .download__btn {
+    min-width: 370px;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 900;
+  }
+}
+.download__btn:active {
+  opacity: 0.8;
+}/*# sourceMappingURL=style.css.map */

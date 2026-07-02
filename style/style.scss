@@ -4,7 +4,9 @@ $font: "Raleway", sans-serif;
 $primary-color: rgba(255, 255, 255, 1);
 $secondary-color:rgba(0, 0, 0, 1);
 $orange-color: rgba(255, 67, 67, 1);
-$gray-color:rgba(186, 187, 197, 1);
+$link-hover-color:rgba(186, 187, 197, 1);
+$text-color:rgba(108, 114, 121, 1);
+$bg-content: rgba(255, 67, 67, 0.8);
 
 
 
@@ -161,7 +163,7 @@ body{
     }
 
     &__link:hover{
-        color: $gray-color;
+        color: $link-hover-color;
     }
 
     &__link:active{
@@ -222,8 +224,196 @@ body{
    }
 }
 
+.benefits{
+    padding:40px 0;
+    text-align: center;
+
+        @media only screen and (min-width:768px){
+            padding:78px 0 80px;
+
+        }
+
+         @media only screen and (min-width:1024px){
+           padding:116px 0;
+            
+        }
+
+    &__container{
+        display:grid;
+        grid-template-columns: 1fr;
+        row-gap:41px;
+        
 
 
+        @media only screen and (min-width:768px){
+            grid-template-columns: repeat(3, 1fr);
+            gap:49px 20px;
+
+        }
+
+         @media only screen and (min-width:1024px){
+           grid-template-columns: repeat(3, 1fr);
+           gap:88px 29px;
+            
+        }
+        
+    }  
+    
+    &__item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+ 
+    }
+
+    &__image-wrapper{
+        margin-bottom:37px;
+        max-width: 75px;
+        
+
+         @media only screen and (min-width:768px){
+            margin-bottom:37px;
+            max-width: 85px;
+
+        }
+
+         @media only screen and (min-width:1024px){
+           margin-bottom:51px;
+            max-width: 100px;
+        }
+    }
+
+    &__image{
+        width:100%;
+        height:100%;
+    }
+
+    &__title{
+        margin-bottom:8px;
+        color:$secondary-color;
+        text-transform: uppercase;
+
+        @include font(18px, 21px, 900);
+
+        @media only screen and (min-width:768px){
+            margin-bottom:23px;
+
+        }
+
+         @media only screen and (min-width:1024px){
+           margin-bottom:42px;
+
+            @include font(24px, 28px, 900);
+        }
+    }
+
+    &__text{
+        color:$text-color;
+
+        @include font(14px, 16px, 400);
+
+        
+        @media only screen and (min-width:1024px){
+            
+            @include font(18px, 21px, 400);
+           
+        }
+    }
+
+}
+
+.projects{
+    padding: 35px 0;
+    text-align: center;
+    
+   
+}
+
+ .project{
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+
+        @media only screen and (min-width:768px){
+           grid-template-columns: repeat(4, 1fr);
+        }
+
+         @media only screen and (min-width:1024px){
+           grid-template-columns: repeat(4, 1fr);
+        }
+
+       
+    
+         &__item{
+        border:2px solid $primary-color;
+        position: relative;
+        cursor:pointer;
+
+        }
+
+
+        &__image{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        
+        }
+
+        &__content{
+            position: absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background: $bg-content;
+
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 0 5px;
+            opacity: 0;
+
+            &:hover{
+                opacity:1;
+            }
+        }
+
+        &__title{
+            color:$primary-color;
+            margin-bottom: 7px;
+            text-transform: uppercase;
+
+            @include font(18px, 21px, 900);
+
+            @media only screen and (min-width:768px){
+            margin-bottom:22px;
+            
+            }
+
+            @media only screen and (min-width:1024px){
+            margin-bottom:36px;
+
+            @include font(24px, 28px, 900);
+
+            }
+        }
+
+
+        &__text{
+            color:$primary-color;
+
+            @include font(14px, 16px, 400);
+
+            @media only screen and (min-width:1024px){
+
+            @include font(18px, 21px, 400);
+
+            }
+        }
+
+    }
 
 .banner{
     padding:50px 0 52px;
@@ -307,6 +497,8 @@ body{
 
     
 }
+
+
 
 .download{
     padding:53px 0;

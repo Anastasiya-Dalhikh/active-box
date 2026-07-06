@@ -58,7 +58,7 @@ body{
 }
 
 .container{
-    max-width: 1190px;
+    max-width: 1210px;
     padding: 0 20px;
     margin:0 auto;
 
@@ -380,14 +380,13 @@ body{
 
          @media only screen and (min-width:1024px){
            gap:88px 29px;
-            
+           
         }
         
     }  
     
     &__item{
-        margin: 0 auto;
-        
+        margin: 0 auto;  
  
     }
 

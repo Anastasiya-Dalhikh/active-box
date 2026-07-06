@@ -115,6 +115,9 @@ body {
     -moz-column-gap: 25px;
          column-gap: 25px;
   }
+  .header__nav::before {
+    display: none;
+  }
 }
 @media only screen and (min-width: 1024px) {
   .header__nav {

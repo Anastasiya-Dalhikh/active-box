@@ -160,6 +160,10 @@ body{
             justify-content: space-between;
             align-items: center;
             column-gap:25px;
+
+            &::before {
+            display: none;  
+            }
         }
 
         @media only screen and (min-width:1024px){

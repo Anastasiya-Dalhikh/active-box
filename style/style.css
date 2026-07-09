@@ -629,11 +629,9 @@ body {
   display: grid;
   grid-template-rows: 1fr 1.08fr;
   row-gap: 25px;
-  align-items: center;
+  align-items: flex-start;
   text-align: center;
-  min-height: 280px;
   height: 100%;
-  align-items: stretch;
 }
 @media only screen and (min-width: 768px) {
   .slider__item {
@@ -643,12 +641,10 @@ body {
     grid-template-rows: none;
     align-items: center;
     text-align: left;
-    min-height: 332px;
   }
 }
 @media only screen and (min-width: 1025px) {
   .slider__item {
-    min-height: 490px;
     -moz-column-gap: 31px;
          column-gap: 31px;
   }
@@ -658,6 +654,7 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  aspect-ratio: 280/218;
 }
 .slider__quote {
   font-family: "Cardo", serif;

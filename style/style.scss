@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
+
 
 $font: "Raleway", sans-serif;
 $primary-color: rgba(255, 255, 255, 1);
@@ -8,6 +10,11 @@ $link-hover-color: rgba(186, 187, 197, 1);
 $text-color:rgba(108, 114, 121, 1);
 $bg-content: rgba(255, 67, 67, 0.8);
 $bg-active:rgba(185, 12, 12, 0.8);
+$bg-footer-primary:rgba(53, 60, 101, 1);
+$bg-footer-secondary:rgba(44, 49, 84, 1);
+$link-border-color:rgba(198, 203, 205, 1);
+$footer-text-color:rgba(128, 128, 128, 1);
+$cardo-font:"Cardo", serif;
 
 
 
@@ -101,18 +108,21 @@ body{
     background-repeat: no-repeat;
 
     position: relative;
-}
 
-
-.banner__wrapper::before{
+    &::before{
     content:'';
     position:absolute;
     top:0;
     left:0;
     width:100%;
     height:100%;
-    background-color: rgba(37, 43, 73, 0.8);
+    background-color: rgba(37, 43, 73, 0.8);    
+    }
+
 }
+
+
+
 
 .header{
     padding:19px 0;
@@ -155,14 +165,17 @@ body{
         left: -100%;            
         width: 100%;
         height: 100vh;
-        // flex-direction: column;
-        padding: 30px 30px 30px;
+        padding: 70px 30px 30px;
         transition: left 0.3s ease;
         z-index: 99;
         background: url(../images/normal-bg.svg);
         background-position: center;
         background-repeat: no-repeat;
         background-size:cover;
+
+        display:flex;
+        flex-direction: column;
+        row-gap:30px;
 
         
 
@@ -192,9 +205,8 @@ body{
             white-space: nowrap;   
             
             display:flex;
-            justify-content: space-between;
-            align-items: center;
             column-gap:25px;
+            
 
             &::before {
             display: none;  
@@ -213,10 +225,8 @@ body{
         }
 
     &__link{
-        display:flex;
-        flex-direction: column;
-        padding: 20px 0;
-        width: 100%;
+        
+        
         text-decoration: none;
         text-transform: uppercase;
         list-style: none;
@@ -230,32 +240,30 @@ body{
         @media only screen and (min-width:768px){
             padding:0;
             @include font(12px, 14px, 700);
+            
         }
 
          @media only screen and (min-width:1025px){
            
             @include font(13px, 15px, 700);
         }
-        
-    }
 
-    &__link:hover{
+
+         &:hover{
         color: $link-hover-color;
         
     }
 
-    &__link:active{
-        color: $orange-color;
-    }
-
-    &__link:first-child{
-        margin-top:40px;
-
-        @media only screen and (min-width:768px){
-            margin-top:0;
+        &:active{
+            color: $orange-color;
         }
+
+        
+
+        
     }
 
+   
     .burger {
     display:flex;         
     flex-direction: column;
@@ -284,7 +292,7 @@ body{
     } 
     
     .burger.active .burger__line:nth-child(1) {
-        transform: translateY(7px) rotate(45deg);
+        transform: translateY(5px) rotate(45deg);
     }
 
     .burger.active .burger__line:nth-child(2) {
@@ -597,6 +605,7 @@ body{
             @media only screen and (min-width:768px){
             grid-template-columns: repeat(4, 1fr);
             column-gap:24px;
+            
             }
 
         @media only screen and (min-width:1025px){
@@ -607,11 +616,15 @@ body{
     }
 
 .member{
+    
+    display: flex;
+    flex-direction: column;
 
         &__image-wrapper{
             aspect-ratio: 280 / 227;
             overflow: hidden;
             margin-bottom:25px;
+
 
             @media only screen and (min-width:768px){
             aspect-ratio: 1 / 1;
@@ -649,6 +662,8 @@ body{
             color:$orange-color;
             text-transform: uppercase;
             margin-bottom:38px;
+            
+            
 
             @include font(14px, 16px, 400);
 
@@ -687,6 +702,7 @@ body{
         &__socials{
             display: flex;
             column-gap: 6px;
+            margin-top: auto;
         }
 
         &__link{
@@ -699,7 +715,11 @@ body{
             border: 1px solid rgba(198, 203, 205, 1);
             transition: border 0.3s ease;
             
-                        
+            
+            path {
+            transition: fill 0.3s ease;    
+            }
+        
 
             &:hover{
                 border: 1px solid #FF4343;
@@ -717,23 +737,151 @@ body{
             
         }
 
-        &__link path {
-            transition: fill 0.3s ease;     // ← для цвета иконки
+       
+        
+    }
+
+
+    .slider{
+   
+    
+    &__bg{
+         background-color: rgba(92, 50, 73, 1); 
+    }
+   
+    
+    &__item{
+        display:grid;
+        grid-template-columns: 1fr;
+        row-gap: 25px;
+        align-items:flex-start;
+        text-align: center;
+        padding-bottom:95px;
+        height: 100%;
+        
+        
+
+        @media only screen and (min-width:768px){
+            grid-template-columns: 1fr 1fr;
+            column-gap: 19px;
+            grid-template-rows: none;
+            align-items: center;
+            text-align: left;
+           padding-bottom:0;
+        }
+
+         @media only screen and (min-width:1025px){
+           
+            column-gap: 31px;
+        }
+    }
+
+    &__image{
+        width:100%;
+        height:100%;
+        object-fit: cover;
+        aspect-ratio:280 / 218;
+
+        
+    }
+
+
+
+    &__quote{
+        font-family:"Cardo", serif;
+        font-style: italic;
+        color:$primary-color; 
+        margin-bottom:15px;
+
+        @include font(24px, 32px, 400);
+
+        @media only screen and (min-width:768px){
+            margin-bottom:8px;
+        }
+
+         @media only screen and (min-width:1025px){
+
+         @include font(36px, 49px, 400);
+        }
+    }
+
+    &__position{
+        color:$primary-color;
+        text-transform: uppercase;
+
+        @include font(12px, 14px, 700);
+
+         @media only screen and (min-width:1025px){
+
+         @include font(13px, 15px, 700);
+        }
+    }
+   
+       
+
+    .swiper-pagination{
+        position: static;
+        margin-top:23px;
+        background: $primary-color;
+       
+       
+
+        @media only screen and (min-width:1025px){
+
+        margin-top:31px;
         }
 
         
     }
 
+    
+
+    .swiper-pagination-bullet{
+        
+            width:9px ;
+            height:9px ;
+            background: transparent ;
+            border:1px solid rgba(126, 93, 111, 1) ;
+            margin:0 10px !important;
+            opacity:1;
+
+            @media only screen and (min-width:768px){
+            margin:0 13px !important;
+
+        }
+
+        @media only screen and (min-width:1025px){
+
+            width:14px ;
+            height:14px ;
+        }
+
+       
+        
+    }
+
+    .swiper-pagination-bullet-active{
+        background: rgba(126, 93, 111, 1);
+    }
+
+
+
+}  
+
+
+
+
+
 .download{
-    padding:53px 0;
+    padding:64px 0 45px;
     text-align: center;
 
-     @media only screen and (min-width:768px){
-        padding:127px 0;
+    @media only screen and (min-width:768px){
+        padding:93px 0 78px;
    }
 
    @media only screen and (min-width:1025px){
-        padding:170px 0;
+        padding:132px 0 114px;
    }
 
    &__title{
@@ -811,3 +959,196 @@ body{
     }    
 
 }
+
+.footer{
+    padding:34px 0 0;
+    text-align: center;
+    background-color: $bg-footer-primary;
+
+        @media only screen and (min-width:768px){
+           padding:46px 0 0;
+        }
+
+        @media only screen and (min-width:1025px){
+            padding:71px 0 0;
+        }
+
+    &__container{
+        display:grid;
+        grid-template-columns: 1fr;
+        row-gap: 59px;
+        margin-bottom: 33px;
+
+        @media only screen and (min-width:768px){
+           grid-template-columns: repeat(3, 1fr);
+           column-gap: 20px;
+           margin-bottom: 43px;
+        }
+
+        @media only screen and (min-width:1025px){
+            column-gap: 30px;
+            margin-bottom: 71px;
+        }
+    }
+
+    &__title{
+        text-transform: uppercase;
+        color:$primary-color;
+
+        @include font(14px, 16px, 700);
+
+        &_location{
+            margin-bottom:34px;
+        }
+
+        &_share{
+            margin-bottom:36px;
+        }
+
+        &_about{
+            margin-bottom:38px;
+        }
+
+
+        @media only screen and (min-width:768px){
+
+        &_location{
+            margin-bottom:17px;
+        }
+
+        &_share{
+            margin-bottom:32px;
+        }
+
+        &_about{
+            margin-bottom:15px;
+        }
+           
+        }
+
+        @media only screen and (min-width:1025px){
+            @include font(18px, 21px, 700);
+
+            &_location{
+            margin-bottom:29px;
+        }
+
+        &_share{
+            margin-bottom:48px;
+        }
+
+        &_about{
+            margin-bottom:28px;
+        }
+        }
+    }
+
+    &__text{
+        color:$primary-color;
+
+        @include font(14px, 16px, 400);
+
+
+        @media only screen and (min-width:1025px){
+
+            @include font(18px, 21px, 400);
+        }
+    }
+
+    &__socials{
+        display:flex;
+        column-gap: 16px;
+        justify-content: center;
+
+        @media only screen and (min-width:768px){
+           column-gap: 23px;
+        }
+
+        @media only screen and (min-width:1025px){
+            column-gap: 27px;
+        }
+    }
+
+    &__link{
+        width:33px;
+        height:33px;
+        border: 1px solid $link-border-color;
+
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease;
+
+        path{
+            transition: fill 0.3s ease;
+        }
+
+        @media only screen and (min-width:1025px){
+            width:39px;
+            height:39px;
+        }
+
+        &:hover{
+            border:1px solid $orange-color;
+            animation: upscale-style 1s ease forwards;
+        }
+
+        &:active{
+            path{
+                fill:$orange-color;
+            }
+        }
+
+        
+
+    }
+
+
+    &__bottom{
+    background-color: $bg-footer-secondary;
+    padding:28px 0;
+    text-align: center;
+    }
+    
+
+
+    &__bottom-copyright{
+        text-transform: capitalize;
+        color:$footer-text-color;
+        margin:0 auto;
+
+        @include font(14px, 16px, 400);
+
+
+        @media only screen and (min-width:768px){
+           max-width:314px;
+           width:100%;
+        }
+
+        @media only screen and (min-width:1025px){
+            max-width:370px;
+            width:100%;
+
+            @include font(18px, 21px, 400);
+
+        }
+        
+    }
+
+    &__bottom-highlighted{
+            color:$primary-color;
+
+            @include font(14px, 16px, 400);
+
+            @media only screen and (min-width:1025px){
+
+            @include font(18px, 21px, 400);
+        }
+    }
+
+
+}
+
+   
+
+

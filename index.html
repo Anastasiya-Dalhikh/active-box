@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="style/style.css">
     <title>ActiveBox</title>
 </head>
@@ -374,6 +378,79 @@
         </div>
     </div>
 
+    
+    <div class="slider slider__container">
+        <div class="slider__bg">
+            <div class="container">
+            <div class="swiper swiperSlider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slider__item">
+          
+                        <img class="slider__image" src="images/slider-image.svg" data-swiper-parallax="-300">
+                        <div class="slider__content">
+                            <p class="slider__quote" data-swiper-parallax="-200">
+                            “Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”
+                            </p>
+                            <p class="slider__position"data-swiper-parallax="-100">
+                                Susan Sims, Interaction Designer at XYZ
+                            </p>
+                        </div>
+            
+                    </div>
+                    <div class="swiper-slide slider__item">
+          
+                        <img class="slider__image" src="images/slider-image-2.jpg" data-swiper-parallax="-300">
+                        <div class="slider__content">
+                            <p class="slider__quote" data-swiper-parallax="-200">
+                            “Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”
+                            </p>
+                            <p class="slider__position"data-swiper-parallax="-100">
+                                Susan Sims, Interaction Designer at XYZ
+                            </p>
+                        </div>
+            
+                    </div>
+                    <div class="swiper-slide slider__item">
+          
+                        <img class="slider__image" src="images/slider-image-3.jpg" data-swiper-parallax="-300">
+                        <div class="slider__content">
+                            <p class="slider__quote" data-swiper-parallax="-200">
+                            “Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”
+                            </p>
+                            <p class="slider__position"data-swiper-parallax="-100">
+                                Susan Sims, Interaction Designer at XYZ
+                            </p>
+                        </div>
+            
+                    </div>
+                    <div class="swiper-slide slider__item">
+          
+                        <img class="slider__image" src="images/slider-image-4.jpg" data-swiper-parallax="-300">
+                        <div class="slider__content">
+                            <p class="slider__quote" data-swiper-parallax="-200">
+                            “Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”
+                            </p>
+                            <p class="slider__position"data-swiper-parallax="-100">
+                                Susan Sims, Interaction Designer at XYZ
+                            </p>
+                        </div>
+            
+                    </div>
+                    
+                </div>
+                
+               
+            </div>
+             
+            </div>
+        </div>
+        
+        
+        <div class="swiper-pagination"></div>
+            
+    </div>
+    
+
     <section class="download">
         <div class="container">
             <h2 class="download__title">
@@ -387,6 +464,90 @@
             </a>
         </div>
     </section>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__item">
+                <h3 class="footer__title footer__title_location">
+                    Location
+                </h3>
+                <p class="footer__text">
+                    3481 Melrose Place
+                    Beverly Hills, CA 90210
+                </p>
+            </div>
+
+            <div class="footer__item">
+                <h3 class="footer__title
+                  footer__title_share">
+                    Share with Love
+                </h3>
+                <div class="footer__socials">
+                    <a class="footer__link" href="#">
+                        <svg width="8" height="16" viewBox="0 0 8 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.13192 15.2284V8.2933H7.47154L7.81931 5.57799H5.13192V3.84845C5.13192 3.06491 5.35023 2.52845 6.47477 2.52845H7.89969V0.107605C7.20639 0.0333048 6.5095 -0.00257063 5.81223 0.000143141C3.74423 0.000143141 2.32438 1.2626 2.32438 3.58022V5.57291H0V8.28822H2.32946V15.2284H5.13192Z" fill="#C6CBCD"/>
+                        </svg>
+                    </a>
+                    <a class="footer__link" href="#">
+                        <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.9202 3.366C14.9312 3.51408 14.9312 3.66131 14.9312 3.80854C14.9312 8.31431 11.5018 13.5063 5.23431 13.5063C3.30338 13.5063 1.50954 12.947 0 11.9756C0.274154 12.0069 0.538154 12.0179 0.823308 12.0179C2.35738 12.0216 3.84801 11.5087 5.05492 10.5617C4.34366 10.5488 3.65418 10.3142 3.08274 9.89047C2.5113 9.46678 2.08643 8.87522 1.86746 8.19839C2.07815 8.22969 2.28969 8.25085 2.51138 8.25085C2.81685 8.25085 3.124 8.20854 3.40915 8.13493C2.63726 7.97907 1.94317 7.56068 1.44491 6.95089C0.946646 6.3411 0.674971 5.57755 0.676077 4.79008V4.74777C1.13046 5.00077 1.65762 5.159 2.21608 5.18015C1.74823 4.86927 1.36461 4.44741 1.09944 3.95221C0.834273 3.45701 0.695803 2.90388 0.696385 2.34215C0.696385 1.70923 0.864769 1.12877 1.16008 0.62277C2.0165 1.67625 3.08466 2.53809 4.29536 3.15248C5.50607 3.76687 6.83232 4.12011 8.18823 4.18931C8.13577 3.93546 8.10361 3.67231 8.10361 3.40831C8.10339 2.96066 8.1914 2.51736 8.3626 2.10374C8.53381 1.69013 8.78485 1.31431 9.10139 0.997775C9.41792 0.68124 9.79374 0.430194 10.2074 0.25899C10.621 0.0877848 11.0643 -0.000222013 11.5119 4.20592e-07C12.4935 4.20592e-07 13.3794 0.411231 14.0022 1.07631C14.7652 0.928753 15.4969 0.650204 16.1649 0.253C15.9106 1.04061 15.3778 1.70847 14.6664 2.13146C15.3431 2.05428 16.0045 1.87631 16.6286 1.60346C16.1625 2.28301 15.5849 2.87891 14.9202 3.366Z" fill="#C6CBCD"/>
+                        </svg>
+                    </a>
+                    <a class="footer__link" href="#">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.3846 0H0.846154C0.62174 0 0.406517 0.0891481 0.247833 0.247833C0.0891481 0.406517 0 0.62174 0 0.846154V14.3846C0 14.609 0.0891481 14.8243 0.247833 14.9829C0.406517 15.1416 0.62174 15.2308 0.846154 15.2308H14.3846C14.609 15.2308 14.8243 15.1416 14.9829 14.9829C15.1416 14.8243 15.2308 14.609 15.2308 14.3846V0.846154C15.2308 0.62174 15.1416 0.406517 14.9829 0.247833C14.8243 0.0891481 14.609 0 14.3846 0ZM4.51762 12.9775H2.25669V5.709H4.51762V12.9775ZM3.38715 4.71646C3.03976 4.71646 2.7066 4.57846 2.46095 4.33282C2.21531 4.08717 2.07731 3.75401 2.07731 3.40662C2.07731 3.05922 2.21531 2.72606 2.46095 2.48041C2.7066 2.23477 3.03976 2.09677 3.38715 2.09677C3.73455 2.09677 4.06771 2.23477 4.31335 2.48041C4.559 2.72606 4.697 3.05922 4.697 3.40662C4.697 3.75401 4.559 4.08717 4.31335 4.33282C4.06771 4.57846 3.73455 4.71646 3.38715 4.71646ZM12.9783 12.9775H10.7199V9.44308C10.7199 8.60031 10.7047 7.51639 9.54546 7.51639C8.36931 7.51639 8.19077 8.43531 8.19077 9.38385V12.9783H5.93408V5.70985H8.10023V6.70323H8.13154C8.43192 6.13208 9.16977 5.52962 10.2672 5.52962C12.5552 5.52962 12.9775 7.03408 12.9775 8.99208V12.9775H12.9783Z" fill="#C6CBCD"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer__item">
+                <h3 class="footer__title
+                 footer__title_about">
+                    About ActiveBox
+                </h3>
+                <p class="footer__text">
+                    Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla non metus auctor fringilla.
+                </p>
+            </div>
+            
+        </div>
+
+        <div class="footer__bottom">
+        <div class="container">
+            <p class="footer__bottom-copyright">
+                    Copyright &copy; 2015 ActiveBox. All Rights Reserved
+                    Made with <span class="footer__bottom-highlighted">by Kamal Chaneman</span>
+            </p>
+        </div>
+                
+        </div>
+    </footer>
+
+    
+
     <script src="activebox.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper('.swiperSlider', {
+        grabCursor: true, 
+        simulateTouch: true,
+        touchRatio: 1,
+        speed: 600,
+        parallax: true,
+        mousewheel: {
+        enabled: true,          // ← разрешаем скролл колесиком
+        sensitivity: 1,         // ← чувствительность
+        forceToAxis: true,      // ← скролл только по горизонтали
+    },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        
+      });
+    </script>
 </body>
 </html>

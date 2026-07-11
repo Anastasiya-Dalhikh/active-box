@@ -378,8 +378,10 @@
         </div>
     </div>
 
+    
     <div class="slider slider__container">
-        <div class="container">
+        <div class="slider__bg">
+            <div class="container">
             <div class="swiper swiperSlider">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide slider__item">
@@ -436,14 +438,18 @@
                     </div>
                     
                 </div>
-      
+                
                
             </div>
              
+            </div>
         </div>
-        <div class="swiper-pagination"></div>
         
+        
+        <div class="swiper-pagination"></div>
+            
     </div>
+    
 
     <section class="download">
         <div class="container">
@@ -506,17 +512,19 @@
             </div>
             
         </div>
-    </footer>
 
-    <div class="footer-bottom">
+        <div class="footer__bottom">
         <div class="container">
-            <p class="footer-bottom__copyright">
+            <p class="footer__bottom-copyright">
                     Copyright &copy; 2015 ActiveBox. All Rights Reserved
-                    Made with <span class="footer-bottom__highlighted">by Kamal Chaneman</span>
+                    Made with <span class="footer__bottom-highlighted">by Kamal Chaneman</span>
             </p>
         </div>
                 
-    </div>
+        </div>
+    </footer>
+
+    
 
     <script src="activebox.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
@@ -524,8 +532,16 @@
     <!-- Initialize Swiper -->
     <script>
       var swiper = new Swiper('.swiperSlider', {
+        grabCursor: true, 
+        simulateTouch: true,
+        touchRatio: 1,
         speed: 600,
         parallax: true,
+        mousewheel: {
+        enabled: true,          // ← разрешаем скролл колесиком
+        sensitivity: 1,         // ← чувствительность
+        forceToAxis: true,      // ← скролл только по горизонтали
+    },
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
